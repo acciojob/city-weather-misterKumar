@@ -23,7 +23,11 @@ const Weather = () => {
       })
       .then((data) => {
         setWeatherData(data);
-        setCity(''); 
+
+       
+        setTimeout(() => {
+          setCity('');
+        }, 4000);
       })
       .catch((error) => {
         console.error('Error fetching weather data', error);
@@ -57,3 +61,4 @@ const Weather = () => {
 };
 
 export default Weather;
+
