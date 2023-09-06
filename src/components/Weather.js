@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 const Weather = () => {
-  const [city, setCity] = useState('New York');
+  const [city, setCity] = useState(''); 
   const [weatherData, setWeatherData] = useState(null);
 
-  const API_KEY = '0fe5114d3f8e421f8e248a4309be88d6';
+  const API_KEY = '0fe5114d3f8e421f8e248a4309be88d6'; 
+
   useEffect(() => {
     if (city) {
       fetchWeatherData(city);
@@ -22,6 +23,7 @@ const Weather = () => {
       })
       .then((data) => {
         setWeatherData(data);
+        setCity(''); 
       })
       .catch((error) => {
         console.error('Error fetching weather data', error);
@@ -55,5 +57,3 @@ const Weather = () => {
 };
 
 export default Weather;
-
-
