@@ -48,7 +48,7 @@ const Weather = () => {
       {weatherData && (
         <div className="weather">
           <h2>{weatherData.name}, {weatherData.sys.country}</h2>
-          <p>Temperature: {weatherData.main.temp} °C</p>
+          <p>Temperature: {weatherData.main.temp} °F</p>
           <p>Description: {weatherData.weather[0].description}</p>
           <img
             src={`https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
